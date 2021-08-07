@@ -1,0 +1,47 @@
+
+<div >
+    <h3>CodingMart</h3>  
+    <div class="remote"> 
+        <div class="topart">
+        <button class="btn btn-danger "(click)="tim()">Auto <i class="fa fa-power-off"></i> {{timeLeft}}</button>
+        <button class="btn btn-danger icon-stop"(click)="showe=!showe;res()"><i class="fa fa-power-off"></i></button>
+        </div>
+        <div class="midpart">
+        <button class="btn btn-warning"(click)="devol()"><i class="fa fa-volume-down"></i></button>
+        <button class="btn btn-warning"(click)="invol()"><i class="fa fa-volume-up"></i></button><br>
+        <button class="btn btn-success icon-backward"(click)="Decrement()"><i class="fa fa-arrow-left"></i></button>
+        <button class="btn btn-success icon-forward"(click)="Increment()"><i class="fa fa-arrow-right"></i></button>
+        <button class="btn btn-warning icon-pause"(click)="debri()"><span class="iconify-inline" data-icon="uil:brightness-empty"></span></button>
+        <button class="btn btn-warning icon-play"(click)="inbri()"><span class="iconify-inline" data-icon="uil:brightness" style="color: black;"></span></button>
+        </div>
+        
+        <p style="font-size: 25px;font-weight:600;color: aliceblue;text-align: center;margin-top: 8%;">TV Remote</p>
+    </div>
+
+    <div class="container tv">
+    <div id="monitor">
+        <div id="monitorscreen"*ngIf="showe; else nosh">
+            <img  src="../assets/black.jpg"class="imsize">
+        </div>
+        <ng-template #nosh>
+        <div id="monitorscreen">
+            <vg-player>
+                
+             <video #media
+              [vgMedia]="media"
+              [src]="currentItem.src"
+              id="singleVideo"
+              preload="auto"
+                crossorigin autoplay loop>
+                </video>
+                
+            </vg-player>
+        </div>
+        
+        </ng-template>
+    </div>
+    
+</div>
+</div>
+
+<router-outlet></router-outlet>

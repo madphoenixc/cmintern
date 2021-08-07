@@ -1,0 +1,72 @@
+
+h3{
+    padding-top: 2%;
+    font-family: 'MonteCarlo', cursive;
+    text-align: center;
+    font-weight: 800;
+    font-size: 80px;
+    padding-bottom: 50px;
+}
+
+.imsize{
+    height: 370px;
+    width: 650px;
+}
+.tv{
+    height: 600px;
+    width: 800px;
+ }
+ #container {
+    max-width: 10px;
+    margin: auto;
+  }  
+  #monitor {
+      background: #000; 
+      position: relative;
+      border-top: 3px solid #888; 
+      margin: 5%;
+      padding: 2% 2% 4% 2%; 
+      border-radius: 10px; 
+      border-bottom-left-radius: 50% 2%; 
+      border-bottom-right-radius: 50% 2%; 
+      transition: margin-right 1s;
+  }
+  #monitor:after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 3%;
+      left: 36%;
+      height: .5%; 
+      width: 28%;
+      background: #ddd; 
+      border-radius: 50%; 
+      box-shadow: 0 0 3px 0 white; 
+  }
+
+.remote{
+    background-color:#878791;
+    height: 400px;
+    width: 200px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px #b6b6ba,-2px -2px 5px #2a2a2b;
+    position: absolute;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+@media screen and (max-width: 992px) {
+    .remote{
+        margin-top: 500px;
+    }
+  }
+  
+.btn{
+    margin:15px 15px 15px 15px;
+    border-radius: 60px;
+    box-shadow: 2px 2px 5px #b6b6ba,-2px -2px 5px #2a2a2b;
+}
+.midpart .btn{
+    align-items: center;
+    margin-left: 30px;
+
+}
